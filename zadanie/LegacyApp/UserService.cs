@@ -6,6 +6,8 @@ namespace LegacyApp
     {
         public bool AddUser(string firstName, string lastName, string email, DateTime dateOfBirth, int clientId)
         {
+            
+            //przenieść do metody IsMailValid()
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
             {
                 return false;
@@ -15,7 +17,8 @@ namespace LegacyApp
             {
                 return false;
             }
-
+            
+            //przenieść do metody IsAgeValid()
             var now = DateTime.Now;
             int age = now.Year - dateOfBirth.Year;
             if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) age--;
@@ -36,6 +39,8 @@ namespace LegacyApp
                 FirstName = firstName,
                 LastName = lastName
             };
+            
+            //przenieść do klienta
 
             if (client.Type == "VeryImportantClient")
             {
