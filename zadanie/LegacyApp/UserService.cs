@@ -7,15 +7,12 @@ namespace LegacyApp
         public bool AddUser(string firstName, string lastName, string email, DateTime dateOfBirth, int clientId)
         {
             
-            //przenieść do metody IsMailValid()
             if (!IsMailValid(firstName, lastName, email))
             {
                 return false;
             }
             
             
-            //przenieść do metody IsAgeValid()
-
             if (!IsAgeValid(dateOfBirth))
             {
                 return false;
@@ -32,39 +29,16 @@ namespace LegacyApp
                 FirstName = firstName,
                 LastName = lastName
             };
-            
-            //przenieść do klienta
 
-            if (client.Type == "VeryImportantClient")
+            if (user.CreditLimitChanges())
             {
-                user.HasCreditLimit = false;
-            }
-            else if (client.Type == "ImportantClient")
-            {
-                using (var userCreditService = new UserCreditService())
-                {
-                    int creditLimit = userCreditService.GetCreditLimit(user.LastName, user.DateOfBirth);
-                    creditLimit = creditLimit * 2;
-                    user.CreditLimit = creditLimit;
-                }
+                UserDataAccess.AddUser(user);
+                return true;
             }
             else
             {
-                user.HasCreditLimit = true;
-                using (var userCreditService = new UserCreditService())
-                {
-                    int creditLimit = userCreditService.GetCreditLimit(user.LastName, user.DateOfBirth);
-                    user.CreditLimit = creditLimit;
-                }
-            }
-
-            if (user.HasCreditLimit && user.CreditLimit < 500)
-            {
                 return false;
             }
-
-            UserDataAccess.AddUser(user);
-            return true;
         }
 
         public bool IsMailValid(string firstName, string lastName, string email)
