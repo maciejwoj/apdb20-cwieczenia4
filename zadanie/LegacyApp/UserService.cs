@@ -8,22 +8,15 @@ namespace LegacyApp
         {
             
             //przenieść do metody IsMailValid()
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
-            {
-                return false;
-            }
-
-            if (!email.Contains("@") && !email.Contains("."))
+            if (!IsMailValid(firstName, lastName, email))
             {
                 return false;
             }
             
+            
             //przenieść do metody IsAgeValid()
-            var now = DateTime.Now;
-            int age = now.Year - dateOfBirth.Year;
-            if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) age--;
 
-            if (age < 21)
+            if (!IsAgeValid(dateOfBirth))
             {
                 return false;
             }
@@ -73,5 +66,35 @@ namespace LegacyApp
             UserDataAccess.AddUser(user);
             return true;
         }
+
+        public bool IsMailValid(string firstName, string lastName, string email)
+        {
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
+            {
+                return false;
+            }
+
+            if (!email.Contains("@") && !email.Contains("."))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool IsAgeValid(DateTime dateOfBirth)
+        {
+            var now = DateTime.Now;
+            int age = now.Year - dateOfBirth.Year;
+            if (now.Month < dateOfBirth.Month || (now.Month == dateOfBirth.Month && now.Day < dateOfBirth.Day)) age--;
+
+            if (age < 21)
+            {
+                return false;
+            }
+
+            return true;
+        }
+            
     }
 }

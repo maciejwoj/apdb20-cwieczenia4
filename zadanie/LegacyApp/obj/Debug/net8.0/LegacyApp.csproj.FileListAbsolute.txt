@@ -10,3 +10,15 @@
 /Users/pgago/Projects/PJATK/classes-materials/APBD/lecture_3/zadanie/LegacyApp/obj/Debug/net8.0/refint/LegacyApp.dll
 /Users/pgago/Projects/PJATK/classes-materials/APBD/lecture_3/zadanie/LegacyApp/obj/Debug/net8.0/LegacyApp.pdb
 /Users/pgago/Projects/PJATK/classes-materials/APBD/lecture_3/zadanie/LegacyApp/obj/Debug/net8.0/ref/LegacyApp.dll
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\bin\Debug\net8.0\LegacyApp.deps.json
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\bin\Debug\net8.0\LegacyApp.dll
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\bin\Debug\net8.0\LegacyApp.pdb
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\LegacyApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\LegacyApp.AssemblyInfoInputs.cache
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\LegacyApp.AssemblyInfo.cs
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\LegacyApp.csproj.CoreCompileInputs.cache
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\LegacyApp.sourcelink.json
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\LegacyApp.dll
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\refint\LegacyApp.dll
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\LegacyApp.pdb
+E:\Projekty\APDB\apdb20-cwieczenia4\zadanie\LegacyApp\obj\Debug\net8.0\ref\LegacyApp.dll
